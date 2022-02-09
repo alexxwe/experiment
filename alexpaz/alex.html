@@ -6,45 +6,74 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
     <link rel="stylesheet" href="./button.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        #layout{
+            min-height:100vh;
+            color:white;
+            display:flex;
+            flex-direction:column;
+            justify-content: space-between
+        }
+    </style>
+
 </head>
 <body>
-    <div class="frame">
-        <a class="custom-btn btn-1" href="https://www.google.com" target="_blank">Social Media</a>
-        <a class="custom-btn btn-2" href="https://www.u.gg" target="_blank"><span>LoL</span></a>
-        <a class="custom-btn btn-3" href="https://www.heavenhold.com" target="_blank"><span>HeavenHold</span></a>
-        <a type="button" class="custom-btn btn-4" href="https://www.youtube.com" target="_blank"><span>Youtube</span></a>
-
-        <button class="custom-btn btn-5" href="https://www.heavenhold.com" target="_blank"><span>5</span></button>
-        <button class="custom-btn btn-6"><span>6</span></button>
-        <button class="custom-btn btn-7"><span>7</span></button>
-        <button class="custom-btn btn-8"><span>8</span></button>
-        <button class="custom-btn btn-9">9</button>
-        <button class="custom-btn btn-10">10</button>
-        <button class="custom-btn btn-11">11<div class="dot"></div></button>
-        <button class="custom-btn btn-12"><span>Click!</span><span>12</span></button>
-        <button class="custom-btn btn-13">13</button>
-        <button class="custom-btn btn-14">14</button>
-        <a href="https://www.google.com" target="_blank" class="custom-btn btn-15">15</a>
-        <a href="https://www.google.com" target="_blank" class="custom-btn btn-16">16</a>
-        
+    <div id='layout' class="bg-zinc-800">
+        <header> 
+            <h1 class="text-center text-2xl m-5">
+                Titulo provisional
+            </h1>
+        </header>
+        <main class="container mx-auto">
+            <div class="flex flex-wrap justify-center">
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-1">Social Media</a></button>
+                <button><a href="https://www.u.gg" target="_blank" class="custom-btn btn-2" >LoL</a></button>
+                <button><a href="https://www.heavenhold.com" target="_blank" class="custom-btn btn-3">HeavenHold</a></button>
+                <button><a href="https://www.youtube.com" target="_blank" class="custom-btn btn-4">Youtube</a></button>
+                <button><a href="https://www3.animeflv.net/" target="_blank" class="custom-btn btn-5">Animeflv</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-6">6</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-7">7</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-8">8</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-9">9</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-10">10</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-11">11<div class="dot"></div></a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-12"><span>Click!</span><span>12</span></a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-13">13</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-14">14</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-15">15</a></button>
+                <button><a href="https://www.google.com" target="_blank" class="custom-btn btn-16">16</a></button>
+                
+            </div>
+            
+        </main>
+        <footer class="container mx-auto py-5">
+            <p>
+                En un lugar de la mancha, cuyo nombre no quiero acordarme, estaba en Milán con mis <span class="bg-cyan-600">amiwis.</span>
+                Los honorarios de la <span class="bg-red-600">maldita inmobiliaria</span> nos han dejado sin dinero, tendremos que dormir en la calle al final, no nos dará para comer como sigamos a este paso.
+                Puto capitalismo, ojalá haber nacido siendo rico. Tampoco me quejaría si me tocase <span class=" bg-yellow-400">la lotería, el gordo o el euromillón.</span>
+            </p>
+        </footer>
     </div>
-</body>
+    </body>
 </html>
 
 
 <!-- 
-<a href="https://www.heavenhold.com" target="_blank" class="custom-btn btn-5">5</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-6">6</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-7">7</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-8">8</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-9">9</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-10">10</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-11">11<div class="dot"></div></a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-12"><span>Click!</span><span>12</span></a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-13">13</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-14">14</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-15">15</a>
-<a href="https://www.google.com" target="_blank" class="custom-btn btn-16">16</a> 
+    
+            <div class="flex justify-center">
+
+                <button class="bg-red-400 hover:bg-red-600 px-4 py-2 hover:mx-3 hover:rotate-45 hover:skew-x-12 rounded shadow">text1</button>
+                <button class="bg-blue-400 hover:bg-blue-600 px-4 py-2 hover:mx-3 hover:rotate-45 hover:skew-x-12 rounded shadow">text2</button>
+                <button class="bg-yellow-400 hover:bg-yellow-600 px-4 py-2 hover:mx-3 hover:rotate-45 hover:skew-x-12 rounded shadow">text3</button>
+                <button class="bg-green-400 hover:bg-green-600 px-4 py-2 hover:mx-3 hover:rotate-45 hover:skew-x-12 rounded shadow">text4</button>
+                <button class="bg-cyan-400 hover:bg-cyan-600 px-4 py-2 hover:mx-3 hover:-rotate-45 hover:skew-y-12 rounded shadow">text5</button>
+                <button class="bg-indigo-400 hover:bg-indigo-600 px-4 py-2 hover:mx-3 hover:-rotate-45 hover:skew-y-12 rounded shadow">text6</button>
+                <button class="bg-purple-400 hover:bg-purple-600 px-4 py-2 hover:mx-3 hover:-rotate-45 hover:skew-y-12 rounded shadow">text7</button>
+                <button class="bg-amber-400 hover:bg-amber-600 px-4 py-2 hover:mx-3 hover:-rotate-45 hover:skew-y-12  rounded shadow">text8</button>
+
+            </div>
 
 text-decoration:none;
 -->
