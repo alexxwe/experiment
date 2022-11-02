@@ -1,10 +1,10 @@
 (function() {
-    const wheel = document.querySelector('.wheel');
-    const startButton = document.querySelector('.button');
-    const display = document.querySelector('.display');
-    
-    let deg = 0;
-    let zoneSize = 45; // deg
+  const wheel = document.querySelector('.wheel');
+  const startButton = document.querySelector('.button');
+  const display = document.querySelector('.display');
+  
+  let deg = 0;
+  let zoneSize = 45; // deg
   
     // Counter clockwise by deg
     const rewards = {
@@ -17,12 +17,12 @@
       7: "+1 Lvl",
       8: "+2 potions",
     }
-  
+    
     const handleWin = (actualDeg) => {
       const winner = Math.ceil(actualDeg / zoneSize);
       display.innerHTML = rewards[winner];
     }
-  
+    
     startButton.addEventListener('click', () => {
       // Reset display
       display.innerHTML = "-";
@@ -35,7 +35,7 @@
       wheel.style.transform = `rotate(${deg}deg)`;
       wheel.classList.add('blur');
     });
-  
+    
     wheel.addEventListener('transitionend', () => {
       wheel.classList.remove('blur');
       // Enable button when spin is over

@@ -1,15 +1,21 @@
-<script>
-var seconds = 0;
-var interval ;
-function pomodoro(mins) {
-   seconds = mins*60 || 0
-   interval = setInterval(function() {
- 
-        seconds--;
-        if(!seconds){
-             clearInterval(interval); 
-             alert("🚨 It is Cool 😎. I wish you could share ");
-        }
-   },1000)
-}
-</script> 
+(function timer(){
+     let seconds = 0
+     let minutes = 0
+     let hours = 0
+     
+         setInterval(() => {
+             seconds += 1
+             if (seconds >= 60) {
+                 seconds = 0
+                 minutes += 1
+             }
+             if (minutes >= 60) {
+                 minutes = 0
+                 hours += 1
+             }
+         }, 1000)
+     })
+const timer =new time()
+     document.getElementById("seconds").innerText
+     document.getElementById("minutes").innerText
+     document.getElementById("hours").innerText
