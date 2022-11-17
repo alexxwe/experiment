@@ -10,14 +10,21 @@ html {
   --border-angle: 0turn;
   width: 30rem;
   height: 25rem;
-  margin-bottom: 50px;
+  margin: 50px;
   background-image: conic-gradient(
       from var(--border-angle),
       rgb(7, 10, 49),
       rgb(23, 23, 54) 50%,
       rgb(15, 15, 53)
     ),
-    conic-gradient(from var(--border-angle), transparent 20%, rgb(12, 161, 32), rgb(0, 136, 255), rgb(249, 253, 2), rgb(255, 0, 51));
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      rgb(12, 161, 32),
+      rgb(0, 136, 255),
+      rgb(249, 253, 2),
+      rgb(255, 0, 51)
+    );
   background-size: calc(100% - (var(--border-size) * 2))
       calc(100% - (var(--border-size) * 2)),
     cover;
@@ -27,21 +34,27 @@ html {
 
   animation: rotate 3s linear infinite;
 }
-
 
 .box2 {
   --border-size: 10px;
   --border-angle: 0turn;
   width: 30rem;
   height: 25rem;
-  margin-bottom: 50px;
+  margin: 50px;
   background-image: repeating-conic-gradient(
       from var(--border-angle),
       red 0%,
       yellow 15%,
       red 33%
     ),
-    conic-gradient(from var(--border-angle), transparent 20%, rgb(51, 92, 102), rgb(0, 136, 255), rgb(13, 41, 133), rgb(0, 0, 0));
+    conic-gradient(
+      from var(--border-angle),
+      transparent 20%,
+      rgb(51, 92, 102),
+      rgb(0, 136, 255),
+      rgb(13, 41, 133),
+      rgb(0, 0, 0)
+    );
   background-size: calc(100% - (var(--border-size) * 2))
       calc(100% - (var(--border-size) * 2)),
     cover;
@@ -51,15 +64,14 @@ html {
 
   animation: rotate 3s linear infinite;
 }
-  @keyframes rotate {
-    from {
-      --border-angle: 0turn;
-    }
-    to {
-      --border-angle: 1turn;
-    }
+@keyframes rotate {
+  from {
+    --border-angle: 0turn;
   }
-
+  to {
+    --border-angle: 1turn;
+  }
+}
 
 .box:hover {
   animation-play-state: paused;
@@ -73,5 +85,3 @@ html {
   inherits: true;
   initial-value: 0turn;
 }
-
-
