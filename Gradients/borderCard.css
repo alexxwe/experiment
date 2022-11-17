@@ -16,6 +16,12 @@ html {
   font-weight: bold;
   color: white;
   position: absolute;
+  text-align: center;
+}
+
+.text:hover {
+  animation: rotate 7s linear infinite;
+  animation-play-state: running;
 }
 
 .card {
@@ -28,6 +34,7 @@ html {
   align-items: center;
   overflow: hidden;
   border-radius: var(--border-radius);
+  margin: 50px;
 }
 
 .card::before {
@@ -39,6 +46,16 @@ html {
   animation: rotate 3.5s linear infinite;
 }
 
+.card::after {
+  content: "";
+  height: 24.5rem;
+  width: 19.5rem;
+  background: black;
+  position: absolute;
+  z-index: 2;
+  border-radius: var(--border-radius);
+}
+
 @keyframes rotate {
   from {
     transform: rotate(0deg);
@@ -48,10 +65,69 @@ html {
   }
 }
 
-.card::after {
+.card2 {
+  position: relative;
+  height: 45rem;
+  width: 40rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin: 50px;
+}
+
+.card2::before {
   content: "";
-  height: 24.5rem;
-  width: 19.5rem;
+  height: 60rem;
+  width: 25rem;
+  background: linear-gradient(90deg, rgb(255, 255, 0), rgb(0, 255, 255));
+  position: absolute;
+  animation: rotate 3.5s linear infinite;
+}
+
+.card2::after {
+  content: "";
+  height: 44rem;
+  width: 39rem;
+  background: black;
+  position: absolute;
+  z-index: 2;
+  border-radius: var(--border-radius);
+}
+
+.card3 {
+  position: relative;
+  height: 20rem;
+  width: 17rem;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin: 50px;
+}
+
+.card3::before {
+  content: "";
+  height: 30rem;
+  width: 10rem;
+  background: linear-gradient(
+    90deg,
+    rgb(67, 48, 155),
+    rgb(16, 29, 145),
+    rgb(255, 0, 0)
+  );
+  position: absolute;
+  animation: rotate 4s linear infinite;
+}
+
+.card3::after {
+  content: "";
+  height: 19.5rem;
+  width: 16.5rem;
   background: black;
   position: absolute;
   z-index: 2;
