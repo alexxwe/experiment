@@ -28,7 +28,7 @@ html {
   position: relative;
   height: 25rem;
   width: 20rem;
-  background: black;
+  background: rgb(0, 0, 0);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -50,7 +50,7 @@ html {
   content: "";
   height: 24.5rem;
   width: 19.5rem;
-  background: black;
+  background: rgb(12, 15, 26);
   position: absolute;
   z-index: 2;
   border-radius: var(--border-radius);
@@ -61,7 +61,7 @@ html {
     transform: rotate(0deg);
   }
   to {
-    transform: rotate(360deg);
+    transform: rotate(-360deg);
   }
 }
 
@@ -91,7 +91,7 @@ html {
   content: "";
   height: 44rem;
   width: 39rem;
-  background: black;
+  background: rgb(12, 11, 11);
   position: absolute;
   z-index: 2;
   border-radius: var(--border-radius);
@@ -128,7 +128,39 @@ html {
   content: "";
   height: 19.5rem;
   width: 16.5rem;
-  background: black;
+  background: rgb(15, 147, 151);
+  position: absolute;
+  z-index: 2;
+  border-radius: var(--border-radius);
+}
+
+.card4 {
+  position: relative;
+  height: 25rem;
+  width: 20rem;
+  background: rgb(0, 0, 0);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  border-radius: var(--border-radius);
+  margin: 50px;
+}
+
+.card4::before {
+  content: "";
+  height: 40rem;
+  width: 35rem;
+  background: linear-gradient(90deg, rgb(199, 211, 35), rgb(36, 18, 85), rgb(200,200,5));
+  position: absolute;
+  animation: rotate 0.7s linear infinite;
+}
+
+.card4::after {
+  content: "";
+  height: 24.5rem;
+  width: 19.5rem;
+  background: rgb(5, 5, 45);
   position: absolute;
   z-index: 2;
   border-radius: var(--border-radius);
