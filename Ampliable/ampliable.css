@@ -16,28 +16,104 @@
     width: 60px;
     height: 60px;
     background: #f0f0f0;
-    animation: anime 3s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+    box-shadow:  0 0 0 #cccccc,
+                 0 0 0 #ffffff,
+                  10px 10px 10px #cccccc inset,
+                  -10px -10px 10px #ffffff inset;
+    animation: ampliable 5s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
   }
+  .text {
+    z-index: 10;
+    font-size: 0px;
+    font-family: system-ui;
+    font-weight: bold;
+    color: rgb(0, 0, 0);
+    text-shadow: 5px 5px 5px #776363;
+    position: absolute;
+    text-align: center;
+    height: 60px;
+    width: 60px;
+    overflow: hidden;
+    animation: text 5s cubic-bezier(0.16, 1, 0.3, 1) 1s infinite alternate;
+    }
 
-  @keyframes anime {
-    0% {
+    .box:hover, .text:hover {
+      animation-play-state: paused;
+    }
+    
+  @keyframes text {
+    25%{
+      z-index: 10;
       width: 60px;
       height: 60px;
-      background: #ccd372;
+      font-size: 40px;
+      color: rgb(7, 174, 224);
+      text-shadow: 5px 5px 5px #170772;
     }
+
+    50%{
+      z-index: 10;
+      width: 60px;
+      height: 150px;
+      font-size: 35px;
+      color: rgb(10, 170, 31);
+      text-shadow: 5px 5px 5px #052705;
+    }
+    75%{
+      z-index: 10;
+      width: 180px;
+      height: 300px;
+      font-size: 38px;
+      color: rgb(240, 13, 13);
+      text-shadow: 5px 5px 5px #2e0404;
+    }
+    100%{
+      z-index: 10;
+      width: 480px;
+      height: 340px;
+      font-size: 80px;
+      color: rgb(255, 255, 255);
+      text-shadow: 15px 15px 15px #b11414,
+                 25px 25px 25px #000000;
+    }
+  }
+
+
+  @keyframes ampliable {
     25% {
       width: 60px;
       height: 60px;
-      background: #a06262;
+      background: #ccd372;
+      box-shadow:  0 0 0 #d4d230,
+                   0 0 0 #aeb121,
+                    10px 10px 10px #d4d230 inset,
+                    -10px -10px 10px #aeb121 inset;
     }
     50% {
       width: 60px;
-      height: 240px;
-      background: #3e579c;
+      height: 150px;
+      background: #da3737;
+      box-shadow:  10px 10px 10px #701f1f,
+                   15px 15px 15px #a81d1d,
+                   5px 5px 5px #701f1f inset,
+                   10px 10px 10px #a81d1d inset;
+    }
+    75% {
+      width: 180px;
+      height: 300px;
+      background: #14307e;
+      box-shadow:  20px 20px 20px #121b50,
+                   25px 25px 25px #2d42a0,
+                   0 0 0 #121b50 inset,
+                   0 0 0 #2d42a0 inset;
     }
     100% {
       width: 480px;
-      height: 240px;
+      height: 340px;
       background: #00fff2;
+      box-shadow:  50px 50px 50px #106a75,
+                   0 0 0 #4fe2e2,
+                   0 0 0 #106a75 inset,
+                   2px 2px 2px #4fe2e2 inset;
     }
 }
