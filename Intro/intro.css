@@ -1,0 +1,89 @@
+body{
+    background-size: cover;
+    background-position: center center;
+    background-color: rgb(33, 37, 88);
+    -webkit-background-size: cover;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    position: absolute;
+    left: 25%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+h1{
+    color:rgb(255, 255, 255);
+    font-family:'Times New Roman', Times, serif;
+    font-weight: bold;
+    text-transform: capitalize;
+    font-size: 48px;
+    margin: 25px 0;
+    letter-spacing: 3.2px;
+    overflow: hidden;
+}
+
+.content span:nth-child(1){
+    position: relative;
+    animation: animate 2s;
+    animation-fill-mode:forwards;
+}
+.content span:nth-child(2){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 0.25s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(3){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 0.5s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(4){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 0.75s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(5){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(6){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 1.25s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(7){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 1.5s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(8){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 1.75s;
+    animation-fill-mode: forwards;
+}
+.content span:nth-child(9){
+    position: relative;
+    animation: animate 2s;
+    animation-delay: 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes animate{
+    0%{bottom: -100px;
+    }
+    100%{
+        bottom: 0px;
+    }
+}
