@@ -1,0 +1,29 @@
+body{
+    background: #252525;
+    overflow: hidden;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+}
+
+button{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    padding: 22px 44px;
+    background: transparent;
+    border: 5px solid #ffffff;
+    color:#ffffff;
+    letter-spacing: 2px;
+    border-radius: 50px;
+    cursor: pointer;
+    outline: none
+}
+
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    color:#ffffff;
+    letter-spacing: 1.5px;
+    text-align: center;
+    
+}
