@@ -12,13 +12,15 @@ function random_bg_color(){
     return bgcolor
     
 }
+// setInterval(random_bg_color, 4000);
+
 
 console.log(random_bg_color())
 
 
 function generateOTP(limit){
     document.getElementById("otp").onclick = generateOTP
-
+    
     let numbers = "0123456789"
     let letters = "abcdefghijklmnñopqrstuvwxyz"
     let symbols = "|@#~€¬!·$%&/()=?¿<>:,-.*^"
@@ -37,6 +39,7 @@ function generateOTP(limit){
     return OTP
     
 }
+// setInterval(generateOTP, 10000);
 
 // console.log(generateOTP(30))
 // poner un setinterval
