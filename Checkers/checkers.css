@@ -51,6 +51,24 @@ li {
     bottom: 5px;
 }
 
-.allpawn {
+.alldama {
     transform: scale(.7);
+}
+
+
+@media (max-width:650px){
+
+    #tog {
+        margin-bottom: 70px;
+
+    }
+
+    .box {
+        width: 11vw;
+        height: 11vw;
+    }
+
+    .allimg {
+        width: 7vw;
+    }
 }
