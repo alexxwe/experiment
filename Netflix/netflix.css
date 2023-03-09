@@ -1,5 +1,6 @@
 body{
     background: #222;
+    height: 100vh;
     /* display: flex;
     align-items: center;
     justify-content: center;
@@ -119,7 +120,6 @@ body{
     left: 600px;
     right: 60px;
     position: absolute;
-    content: '';
 }
 .T::before{
     background: rgb(153, 13, 13);
