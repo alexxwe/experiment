@@ -57,7 +57,33 @@ h3 {
     width: 175px;
     text-align: center;
     margin: 10px 10px 10px 10px;
-    box-shadow: 5px 5px 20px -7px rgba(0, 0, 0, 0.5);
+    box-shadow: 15px 15px 20px -5px rgba(0, 0, 0, 0.5);
+}
+
+.card2 {
+    border-radius: 50% 50%;
+    cursor: pointer;
+    display: inline-block;
+    height: 250px;
+    overflow: hidden;
+    transform: translatez(35px);
+    width: 175px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    box-shadow: 10px 10px 10px -5px rgba(0, 0, 0, 0.7);
+}
+
+.card3 {
+    border-radius: 80% 70% / 80% 10%;
+    cursor: pointer;
+    display: inline-block;
+    height: 250px;
+    overflow: hidden;
+    transform: translatez(35px);
+    width: 175px;
+    text-align: center;
+    margin: 10px 10px 10px 10px;
+    box-shadow: -10px -10px 20px -5px rgba(0, 0, 0, 0.6);
 }
 
 .card_img_one,
