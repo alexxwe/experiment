@@ -135,3 +135,80 @@ function solution4(s1, s2) {
 console.log(solution4(d1, d2))
 console.log(solution4(d3, d4))
 console.log(solution4(d5, d6))
+
+console.log("-------------------------")
+console.log("Exercise 5")
+console.log("-------------------------")
+//return the longest string
+let e1 = ["a", "ab", "abc", "abcd", "abcde"]
+let e2 = ["aa", "a"]
+let e3 = ["aa", "abbb"]
+let e4 = ["a"]
+let e5 = ["aa", "aleeeex" ]
+let e6 = ["aa", "alalalal", "efefefef", "aaaaaaaa", "tadcsd"]
+
+function solution5(inputArray) {
+    let longestString = []
+    let maxLength = 0
+    
+    for(let i = 0; i < inputArray.length; i++) {
+        const currentLength = inputArray[i].length
+    
+        if(currentLength > maxLength) {
+            longestString = [inputArray[i]]
+            maxLength = currentLength
+        }
+        else if(currentLength === maxLength) {
+            longestString.push(inputArray[i])
+        }
+    
+    }
+    return longestString
+    
+    
+}
+
+console.log(solution5(e1))
+console.log(solution5(e2))
+console.log(solution5(e3))
+console.log(solution5(e4))
+console.log(solution5(e5))
+console.log(solution5(e6))
+
+
+console.log("-------------------------")
+console.log("Exercise 6")
+console.log("-------------------------")
+
+let f1 = [50, 50, 60, 65]
+let f2 = [10, 35, 40, 20, 15, 60]
+let f3 = [10]
+let f4 = [4, 2, 9, 11, 2, 16]
+let f5 = [10, 20, 45, 50, 80]
+let f6 = [9999, 999, 4444, 444]
+
+function solution6(a) {
+    let team1 = 0;
+    let team2 = 0;
+  
+    for (let i = 0; i < a.length; i++) {
+      if (i % 2 === 0) {
+        // If the index is even, add the weight to team 1.
+        team1 += a[i];
+      } else {
+        // If the index is odd, add the weight to team 2.
+        team2 += a[i];
+      }
+    }
+  
+    return [team1, team2];
+  }
+
+
+console.log(solution6(f1))
+console.log(solution6(f2))
+console.log(solution6(f3))
+console.log(solution6(f4))
+console.log(solution6(f5))
+console.log(solution6(f6))
+
