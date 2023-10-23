@@ -179,7 +179,7 @@ console.log(solution5(e6))
 console.log("-------------------------")
 console.log("Exercise 6")
 console.log("-------------------------")
-
+//Alternating sums. sum the even elements positions in the array and do the same with the odd ones.
 let f1 = [50, 50, 60, 65]
 let f2 = [10, 35, 40, 20, 15, 60]
 let f3 = [10]
@@ -212,3 +212,50 @@ console.log(solution6(f4))
 console.log(solution6(f5))
 console.log(solution6(f6))
 
+
+console.log("-------------------------")
+console.log("Exercise 7")
+console.log("-------------------------")
+//Check if the arrays are similar, greater than 2 should be false
+let g1 = [1,2,3]
+let g2 = [3,2,1]
+let g3 = [1,2,2]
+let g4 = [2]
+let g5 = [1,2,3,4]
+let g6 = [4,3,1,2]
+let g7 = [1]
+let g8 = [2]
+
+
+function solution7(a, b) {
+//Check if the length of the arrays are the same.
+    if (a.length !== b.length) {
+        return false
+    }
+    
+    let differentPosition = []
+    
+    //compare elements
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] !== b[i]) {
+            differentPosition.push(i)
+        }
+    }
+    
+    //try to make it similar by swapping elements
+    if(differentPosition.length === 0) {
+        return true
+    } else if (differentPosition.length == 2) {
+        const [pos1, pos2] = differentPosition
+        return a[pos1] === b[pos2] && a[pos2] === b[pos1]
+    }
+    //if the array > 2 == false
+    return false
+    }
+
+console.log(solution7(g1, g2))
+console.log(solution7(g1, g3))
+console.log(solution7(g4, g7))
+console.log(solution7(g5, g6))
+console.log(solution7(g5, g7))
+console.log(solution7(g4, g8))
