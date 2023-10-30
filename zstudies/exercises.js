@@ -259,3 +259,49 @@ console.log(solution7(g4, g7))
 console.log(solution7(g5, g6))
 console.log(solution7(g5, g7))
 console.log(solution7(g4, g8))
+
+console.log("-------------------------")
+console.log("Exercise 8")
+console.log("-------------------------")
+//
+let h1 = [1,3,5]
+let h2 = [1,6]
+let h3 = [2,4,6,7]
+let h4 = [3,4,5,6]
+let h5 = [2]
+let h6 = []
+let h7 = [6,2,3,8]
+//how many numbers need to fill all the empty spaces between numbers, adding 1 to the previous (max numbers is the greatest number in the array)
+
+function solution8(statues) {
+    
+    //creamos la variable
+    let statuesNeed = 0
+    
+    //ordenamos statues de manera ascendente
+    statues.sort((a, b) =>{
+        return a - b
+    })
+    
+    //recorremos el array
+    for(let i = 0 ; i < statues.length ; i++){
+        
+        //Comprobamos si la diferencia entre los huecos del array es mayor de 1
+        //si hay mas diferencia de 1 es que hay un hueco
+        if(statues[i+1] - statues[i] > 1){
+            //incrementa statuesNeed por la cantidad de estatuas que faltan
+            statuesNeed += statues[i+1] - statues[i] - 1
+        }
+    }
+    
+    //devolvemos el valor de las estutuas que faltan
+    return statuesNeed
+}
+
+console.log(solution8(h1))
+console.log(solution8(h2))
+console.log(solution8(h3))
+console.log(solution8(h4))
+console.log(solution8(h5))
+console.log(solution8(h6))
+console.log(solution8(h7))
