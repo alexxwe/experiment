@@ -305,3 +305,61 @@ console.log(solution8(h4))
 console.log(solution8(h5))
 console.log(solution8(h6))
 console.log(solution8(h7))
+
+console.log("-------------------------")
+console.log("Exercise 9")
+console.log("-------------------------")
+//Check if IPv4 exist
+
+let i1 = "123.123.123.123"
+let i2 = "0.0.0.0"
+let i3 = "255.255.255.255"
+let i4 = ""
+let i5 = "256.123.123.123"
+let i6 = "255.0.1.3"
+let i7 = "255.0.1.255.255"
+let i8 = "255.0.1"
+
+function solution9(inputString) {
+    const parts = inputString.split('.')
+   
+     // Check if the IPv4 has 4 parts
+     if (parts.length !== 4) {
+       return false
+     }
+   
+     //Iterate through each part
+     for (let i = 0; i < parts.length; i++) {
+       const part = parts[i]
+   
+       //False if the part is not a number or an empty string
+       if (isNaN(part) || part === '') {
+         return false
+       }
+   
+       //Convert the part to a number
+       const num = parseInt(part, 10)
+   
+       //Check if the number is in the range [0, 255]
+       if (num < 0 || num > 255) {
+         return false
+       }
+   
+       //Check the numbers to not be 0
+       if (part.length > 1 && part[0] === '0') {
+         return false
+       }
+     }
+   
+     //If all checks pass, return true
+     return true
+   }
+
+console.log(solution9(i1))
+console.log(solution9(i2))
+console.log(solution9(i3))
+console.log(solution9(i4))
+console.log(solution9(i5))
+console.log(solution9(i6))
+console.log(solution9(i7))
+console.log(solution9(i8))
