@@ -363,3 +363,40 @@ console.log(solution9(i5))
 console.log(solution9(i6))
 console.log(solution9(i7))
 console.log(solution9(i8))
+
+
+console.log("-------------------------")
+console.log("Exercise 10")
+console.log("-------------------------")
+//Check if all digits of the given integer are even.
+
+let j1 = 135
+let j2 = 16
+let j3 = 2468
+let j4 = 3456
+let j5 = 2
+let j6 = 0
+let j7 = 6238
+
+function solution10(n) {
+    //Convert the integer to a string to iterate the digits
+        let digits = n.toString()
+    
+        //Check if every digit is even
+        for (let i = 0; i < digits.length; i++) {
+            if (parseInt(digits[i]) % 2 !== 0) {
+                return false //If any digit is NOT even, return false
+            }
+        }
+    
+        //If all deigits are even, return true
+        return true
+    }
+
+console.log(solution10(j1))
+console.log(solution10(j2))
+console.log(solution10(j3))
+console.log(solution10(j4))
+console.log(solution10(j5))
+console.log(solution10(j6))
+console.log(solution10(j7))
