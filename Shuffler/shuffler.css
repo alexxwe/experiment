@@ -1,0 +1,35 @@
+.container {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  .row {
+    margin-top: 20px;
+  }
+  
+  .card {
+    display: inline-block;
+    width: 100px;
+    height: 150px;
+    background-color: lightgray;
+    border: 1px solid black;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  #redRow .card {
+    background-color: #ff9999;
+  }
+  
+  #blueRow .card {
+    background-color: #99ccff;
+  }
+  
+  #blackRow .card {
+    background-color: #999999;
+  }
+  
+  #greenRow .card {
+    background-color: #99ff99;
+  }
