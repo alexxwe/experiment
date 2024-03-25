@@ -33,3 +33,21 @@
   #greenRow .card {
     background-color: #99ff99;
   }
+
+  .card[data-suit="♥"] {
+    background-color: #ff9999;
+  }
+
+  .card[data-suit="♦"] {
+    background-color: #99ccff;
+  }
+
+  .card[data-suit="♣"] {
+    background-color: #999999;
+
+  }
+
+  .card[data-suit="♠"] {
+    background-color: #99ff99;
+
+  }
