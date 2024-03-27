@@ -8,7 +8,9 @@
   }
   
   .card {
-    display: inline-block;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 150px;
     background-color: lightgray;
@@ -16,22 +18,7 @@
     margin-right: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
-  }
-  
-  #redRow .card {
-    background-color: #ff9999;
-  }
-  
-  #blueRow .card {
-    background-color: #99ccff;
-  }
-  
-  #blackRow .card {
-    background-color: #999999;
-  }
-  
-  #greenRow .card {
-    background-color: #99ff99;
+    font-size: xxx-large;
   }
 
   .card[data-suit="♥"] {
@@ -44,10 +31,8 @@
 
   .card[data-suit="♣"] {
     background-color: #999999;
-
   }
 
   .card[data-suit="♠"] {
     background-color: #99ff99;
-
   }
