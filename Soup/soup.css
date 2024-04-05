@@ -20,3 +20,11 @@ body {
     text-align: center;
     line-height: 30px;
   }
+
+  .red-background {
+    background-color: red;
+}
+
+.green-background {
+  background-color: green;
+}

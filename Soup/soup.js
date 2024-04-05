@@ -54,11 +54,34 @@ function generateSoupBoard() {
         }
     })
 
-   
+    cells.forEach(cell => {
+        cell.addEventListener('click', selectLine)
+    })
 }
 
 function randomLetter() {
     return String.fromCharCode(65 + Math.floor(Math.random() * 26))
 }
 
+function selectLine(event) {
+    var cell = event.target
+    var row = cell.parentNode
+    var rowIndex = Array.from(row.parentNode.children).indexOf(row)
+    var columnIndex = Array.from(row.children).indexOf(cell)
 
+    var word = ''
+
+    // Select letters from the clicked cell to the end of the row
+    for (var i = columnIndex; i < row.children.length; i++) {
+        word += row.children[i].textContent
+        row.children[i].classList.add('green-background')
+    }
+
+    // Select letters from the clicked cell to the end of the column
+    for (var i = rowIndex; i < row.parentNode.children.length; i++) {
+        word += row.parentNode.children[i].children[columnIndex].textContent
+        row.parentNode.children[i].children[columnIndex].classList.add('red-background')
+    }
+
+    console.log('Selected word:', word)
+}
