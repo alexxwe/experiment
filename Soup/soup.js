@@ -71,17 +71,28 @@ function selectLine(event) {
 
     var word = ''
 
-    // Select letters from the clicked cell to the end of the row
     for (var i = columnIndex; i < row.children.length; i++) {
         word += row.children[i].textContent
-        row.children[i].classList.add('green-background')
+        if (wordList.includes(word)) {
+            for (var j = columnIndex; j <= i; j++) {
+                row.children[j].classList.add('green-background')
+            }
+            return
+        }
     }
 
-    // Select letters from the clicked cell to the end of the column
-    for (var i = rowIndex; i < row.parentNode.children.length; i++) {
-        word += row.parentNode.children[i].children[columnIndex].textContent
-        row.parentNode.children[i].children[columnIndex].classList.add('red-background')
+    for (var i = columnIndex; i >= 0; i--) {
+        word = row.children[i].textContent + word
+        if (wordList.includes(word)) {
+            for (var j = i; j < columnIndex + word.length; j++) {
+                row.children[j].classList.add('green-background')
+            }
+            return
+        }
     }
+
+    // If no word found, color the clicked cell in red
+    cell.classList.add('red-background')
 
     console.log('Selected word:', word)
 }
