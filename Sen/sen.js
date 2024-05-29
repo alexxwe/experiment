@@ -4,7 +4,24 @@ canvas.width = window.innerWidth
 canvas.height = window.innerHeight
 
 const waves = []
-const waveCount = 25
+// const waveCount = 25
+const waveCounts = [15,20,25,30,40,45,50,55,60,65,70,75,80,85,90,95,100]
+let waveCount = waveCounts[0]
+
+function initializeWaves() {
+    waves.length = 0
+    for (let i = 0; i < waveCount; i++) {
+        waves.push({
+            y: canvas.height / 2 - 100 + Math.random() * 200,
+            length: 0.01 + Math.random() * 0.001,
+            amplitude: 50 + Math.random() * 100,
+            frequency: 0.01 + Math.random() * 0.03,
+            phase: Math.random() * Math.PI * 2,
+        })
+    }
+}
+
+initializeWaves()
 
 for (let i = 0; i < waveCount; i++) {
     waves.push({
@@ -43,3 +60,8 @@ window.addEventListener('resize', () => {
         wave.y = canvas.height / 2 - 100 + Math.random() * 200
     })
 })
+
+setInterval(() => {
+    waveCount = waveCounts[Math.floor(Math.random() * waveCounts.length)]
+    initializeWaves()
+}, 3000)
