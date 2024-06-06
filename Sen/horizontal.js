@@ -13,7 +13,7 @@ function initializeWaves() {
     waves.length = 0
     for (let i = 0; i < waveCount; i++) {
         waves.push({
-            y: canvas.height / 2 - 100 + Math.random() * 200,   // Intial vertical position of the wave
+            x: canvas.height / 2 - 100 + Math.random() * 200,   // Intial horizontal position of the wave
             length: 0.01 + Math.random() * 0.001,               // Wavelenght, affects spatial frequency
             amplitude: 50 + Math.random() * 100,                // Max height of the wave
             frequency: 0.01 + Math.random() * 0.03,             // Temporal frequency, affects the speed of the animation
@@ -58,10 +58,10 @@ function animate() {
 
     waves.forEach((wave, index) => {
         context.beginPath()
-        context.moveTo(0, wave.y)
+        context.moveTo(0, wave.x)
         for (let i = 0; i < canvas.width; i++) {
             const yOffset = Math.sin(i * wave.length + wave.phase) * wave.amplitude * Math.sin(wave.phase)
-            context.lineTo(i, wave.y + yOffset)
+            context.lineTo(i, wave.x + yOffset)
         }
         context.strokeStyle = `hsl(${index / 2 + 170}, 100%, 50%)`
         context.stroke()
@@ -75,6 +75,6 @@ window.addEventListener('resize', () => {
     canvas.width = window.innerWidth
     canvas.height = window.innerHeight
     waves.forEach(wave => {
-        wave.y = canvas.height / 2 - 100 + Math.random() * 200
+        wave.x = canvas.height / 2 - 100 + Math.random() * 200
     })
 })
